@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kanye</title>
+    <style>
+        .website-headline{
+            text-align: center;
+        }
+        #kanye-wisdom{
+            height: 404px;
+            width: 720px;
+            background-image: url("kanye-of-the-lake.jpg");
+        }
+        #kanye-quote{
+            color: yellow;
+            font-size: large;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .reaction-btn{
+            font-size: 7em;
+        }
+        #list-laugh{
+            background-color: yellow;
+        }
+        #list-wtf{
+            background-color: green;
+        }
+        #list-jesus{
+            background-color:blue;
+        }
+        .list-wrapper{
+            display: flex;
+        }
+        .list{
+            flex-grow: 1;
+            min-height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="website-headline">Oh Kanye of the lake. What is your wisdom?</h1>
+
+    <div id="kanye-wisdom">
+        <h4 id="kanye-quote"></h4>
+    </div>
+
+    <br>
+
+    <div>
+        <button id="btn-kanye-wisdom">Get new wisdom</button>
+    </div>
+
+    <br>
+
+    <div class="btn-wrapper">
+        <button id="btn-laugh" class="reaction-btn">😂</button>
+        <button id="btn-wtf" class="reaction-btn">🥴</button>
+        <button id="btn-jesus" class="reaction-btn">🙏</button>
+    </div>
+
+    <br>
+
+    <div class="list-wrapper">
+        <div id="list-laugh" class="list"></div>
+        <div id="list-wtf" class="list"></div>
+        <div id="list-jesus" class="list"></div>
+    </div>
+
+    <script src="./kanye.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+Dinosaur API
+
+GET	    /dinosaurs	      Gets all dinosaurs			          Gives the whole Jurassic Park.
+GET	    /dinosaurs/{id}	  Gets dinosaur by id {id}		          This must surely be Tyrannosaurus Rex.
+POST	/dinosaurs	      Adds a new dinosaur			          We created a new dinosaur: the iNdOmItUs ReX.
+PUT	    /dinosaurs/{id}	  Replaces dinosaur by id {id} entirely	  Turns out the T. Rex was never a dinosaur. It was John Hammond all along, who was the dinosaur.
+PATCH	/dinosaurs/{id}	  Updates parts of dinosaur by id {id}	  John Hammond's dietary habits updated to "ice-creamivore".
+DELETE	/dinosaurs/{id}	  Deletes dinosaur by id {id}		      It was pretty stupid to call John Hammond a dinosaur anyway.

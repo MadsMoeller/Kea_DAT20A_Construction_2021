@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <script>
+    const greetings = function (){
+      console.log("Hello");
+    }
+    //greetings();
+    whomToGreet();
+
+    function whomToGreet(greetings){
+      greetings + console.log("World");
+    }
+
+    const myFavouriteThings = ["Java", "Eggplant emoji", false];
+
+    function printer(something){
+      console.log(something);
+    }
+
+    //HoF - High order Function - en funktion, som tager en funktion som argument
+    //myFavouriteThings.forEach(printer);
+
+    //lambda
+    //myFavouriteThings.forEach(element => printer(element));
+
+    //myFavouriteThings.forEach((element, index, list) => printer(element));
+
+    //myFavouriteThings.forEach(console.log);
+    //is the same as:
+    myFavouriteThings.forEach((element, index, list) => console.log(element, index, list));
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "hero": "Bowser",
+  "villain": "Super Mario",
+  "theaterOfWar": "Bowser's Big Castle",
+  "heroWins": true,
+  "villainsHenchmen": [
+    {"henchman": "Luigi"},
+    {"henchman": "Toad"},
+    {"henchman": "Yoshi"}
+  ]
+}

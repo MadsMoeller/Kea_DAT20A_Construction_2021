@@ -1,0 +1,11 @@
+{
+  "key": "value",
+  "manufacturer": "Airbus",
+  "isBetterThanBoeing": true,
+  "productLineSelection": 60,
+  "pilots": [
+    {"name": "Bob"},
+    {"name": "Rabia"},
+    {"name": "Eve"}
+  ]
+}
