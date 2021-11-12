@@ -23,6 +23,9 @@ public class Artist {
     private int age;
 
     @Column
+    private String image;
+
+    @Column
     private String primaryStyle;
 
     @Column(length = 100)

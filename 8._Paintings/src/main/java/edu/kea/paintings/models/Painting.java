@@ -33,6 +33,9 @@ public class Painting {
     @Column
     private int year;
 
+    @Column
+    private String image;
+
     @JsonIgnore
     @Column
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)

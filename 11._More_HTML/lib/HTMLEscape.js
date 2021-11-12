@@ -1,4 +1,6 @@
 function escapeHTML(string) {
+    console.log(string)
+    if(!string) return "";
     string = string.replace(/&/g, "&amp;");
     string = string.replace(/>/g, "&gt;");
     string = string.replace(/</g, "&lt;");

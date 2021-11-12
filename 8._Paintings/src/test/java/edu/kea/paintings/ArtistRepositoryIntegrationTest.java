@@ -22,18 +22,17 @@ public class ArtistRepositoryIntegrationTest {
     private ArtistRepository artists;
 
     @Test
-    public void whenFindByName_thenReturnArtist(){
+    public void whenFindByNameThenReturnArtist(){
         //given
         Artist artist = new Artist();
-        artist.setName("Salvador Dali");
+        artist.setName("ø");
         testEntityManager.persist(artist);
         testEntityManager.flush();
 
         //when
-        Artist artistFound = artists.findByName("Salvador Dali");
+        Artist artistFound = artists.findByName("ø");
 
         //then
         assertEquals(artistFound.getName(), artist.getName());
     }
-
 }

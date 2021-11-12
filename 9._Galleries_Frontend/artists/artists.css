@@ -1,0 +1,17 @@
+.artist-image{
+    height: 150px;
+}
+
+.artist-card{
+    display: flex;
+    border-style: solid;
+    width: 500px;
+}
+
+.artist-image-div{
+    width: 300px;
+}
+
+.artist-description-div{
+    flew-grow: 1;
+}

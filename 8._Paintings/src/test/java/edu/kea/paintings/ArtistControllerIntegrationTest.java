@@ -15,16 +15,18 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.util.Arrays;
-import java.util.List;
-
+//import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.Matchers.hasSize;
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+
+import java.awt.*;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
@@ -41,27 +43,29 @@ public class ArtistControllerIntegrationTest {
     private GalleryRepository galleries;
 
     @Test
-    public void givenArtists_whenGetArtists_thenReturnJsonArray() throws Exception {
-        Artist a1 = new Artist();
-        Artist a2 = new Artist();
-        Artist a3 = new Artist();
-        a1.setName("Salvador Dali");
-        a2.setName("Pablo Picasso");
-        a3.setName("Asger Jorn");
+    public void givenArtistsWhenGetArtistsThenReturnJsonArray() throws Exception {
+        Artist artistOne = new Artist();
+        Artist artistTwo = new Artist();
+        Artist artistThree = new Artist();
 
-        List<Artist> allArtists = Arrays.asList(a1, a2, a3);
+        artistOne.setName("Salvador Dali");
+        artistTwo.setName("Pablo Picasso");
+        artistThree.setName("JanJanJan");
+
+        List<Artist> allArtists = Arrays.asList(artistOne, artistTwo, artistThree);
 
         given(artists.findAll()).willReturn(allArtists);
 
         mvc.perform(get("/artists")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(3)))
+                .andExpect(jsonPath("$", org.hamcrest.Matchers.hasSize(3)))
                 .andExpect(jsonPath("$[0].name", is("Salvador Dali")))
                 .andExpect(jsonPath("$[1].name", is("Pablo Picasso")))
-                .andExpect(jsonPath("$[2].name", is("Asger Jorn")));
+                .andExpect(jsonPath("$[2].name", is("JanJanJan")));
 
         verify(artists, VerificationModeFactory.times(1)).findAll();
         reset(artists);
+
     }
 }
