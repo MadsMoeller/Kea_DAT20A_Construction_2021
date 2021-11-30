@@ -9,6 +9,12 @@ fetch(baseURL + "/galleries")
 function createGalleryTableRow(gallery){
     const galleryTableRow = document.createElement("tr")
     galleryTableRow.id = gallery.id;
+    galleriesGalleryTableBody.appendChild(galleryTableRow);
+    constructGalleryTableRow(galleryTableRow, gallery);
+
+}
+
+function constructGalleryTableRow(galleryTableRow, gallery) {
     galleryTableRow.innerHTML =
         `
         <tr>
@@ -23,7 +29,7 @@ function createGalleryTableRow(gallery){
             <td><button onclick="deleteGallery(${gallery.id})">❌</button></td>
         </tr>
         `
-    galleriesGalleryTableBody.appendChild(galleryTableRow)
+
     document.getElementById(`update-button-${gallery.id}`)
         .addEventListener("click", () => updateGallery(gallery));
 }

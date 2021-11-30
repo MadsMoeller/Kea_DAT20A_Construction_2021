@@ -21,12 +21,9 @@ function updateGallery(gallery){
 
 function undoUpdateTableRow(gallery){
     console.log("cancel")
-    const galleryTableRow = document.getElementById(gallery.id)
-    createGalleryTableRow(galleryTableRow, gallery)
+    const galleryTableRow = document.getElementById(gallery.id);
 
-    document.getElementById(`update-button-${gallery.id}`)
-        .addEventListener("click", () => updateGallery(gallery));
-
+    constructGalleryTableRow(galleryTableRow, gallery);
 }
 
 function updateGalleryInBackend(galleryId){
@@ -46,6 +43,7 @@ function updateGalleryInBackend(galleryId){
     }).then(response => {
         if (response.status === 200){
             console.log("You go, cowboy!")
+            constructGalleryTableRow(tableRowToUpdate, galleryToUpdate);
         }
     });
 

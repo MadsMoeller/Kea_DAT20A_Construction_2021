@@ -21,6 +21,8 @@ function createCharacterCard(character){
     //console.log(characters.length);
 }
 
+
+
 function searchCharachters(){
     const status = document.getElementById("status-dropdown").value;
     //console.log(status)

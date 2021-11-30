@@ -19,7 +19,11 @@ function createPaintingCard(painting){
 function constructPaintingCard(paintingDiv, painting){
     paintingDiv.innerHTML =
         `
-        <h3>${painting.title}</h3>
+        <h3>${escapeHTML(painting.title)}</h3>
+        <h3>${"$"+escapeHTML(painting.price.toString())}</h3>
+        <h3>${escapeHTML(painting.genre)}</h3>
+        <h3>${escapeHTML(painting.year.toString())}</h3>
+        <br>
         `
 
 }

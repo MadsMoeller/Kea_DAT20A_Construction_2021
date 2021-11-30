@@ -42,7 +42,7 @@ function createNewArtist(){
         primaryStyle: primaryStyle
     }
 
-    console.log(newArtist)
+    //console.log(newArtist)
     fetch("http://localhost:8080/artists",{
         method: "POST",
         headers: {
